@@ -24,7 +24,7 @@
 	     
 		 
 
-I think a dotnet + react (or angular) application would be an excellent idea. There are definitely benefits to it but feel free to use other technologies/frameworks. Obviously if you want to use other frontend tools/technologies to help you achieve the work, I’m happy with it, but remember the focus must be as much in having it working as it should to have a good user experience, bonus points if you are able to produce a mockup and explain the reason why you used certain components. It is important the user understands all the functionalities we have to offer and is able to understand them correctly
+I would recommend a dotnet + react (or angular) application would be an excellent idea, but feel free to use other technologies/frameworks that help you achieve the goal. Remember the focus must be as much in having it working as it should to have a good user experience, bonus points if you are able to create tests (Unit, Integration, Automated) to help guarantee an excellent code quality. It is important the user understands all the functionalities we have to offer and is able to understand them correctly
 
 Once you are done please commit the code and create a Pull Request so we can code review it.”
 
