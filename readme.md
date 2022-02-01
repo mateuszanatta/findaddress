@@ -7,8 +7,6 @@
     The Postcodes.io API requests, storage (EF Core in memory), and distance computation are handled in the backend (.NET 6 Web API), while the frontend (ReactJS) is responsible to display the information requested.
 </p>
 
-### A working example for the web service is: http://api.postcodes.io/postcodes/N76RS
-
 ### ENDPOINTS
 
 `GET: /GetAddressByPostCode` verifies whether there is a saved address in the in-memory EF Core database. If the address was already searched and return it. Otherwise, make an API call to [Postcodes.io](http://api.postcodes.io/postcodes/) with the postcode, compute the distance, and save it in the in-memory EF Core database
@@ -24,6 +22,8 @@
 | #3    | SW1A     |     |
 | #4    | W1B3AG   |     |
 | #5    | PO63TD   |     |
+
+##### A working example for the web service is: http://api.postcodes.io/postcodes/N76RS
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mateuszanatta/
