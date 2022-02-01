@@ -1,48 +1,29 @@
-# We are excited you are taking the time to solve our technical assignment! #
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-### Let’s pretend you are starting your first day with us. After you settle in, your first task will be assigned. Both Joseph (Product Owner) and Ness (Technical Lead) are ready to give you more details on your first task. ###
-
-> Joseph - “Hi, I have your first task, excited?
-
-> We need to create a web application that allows you to find the addresses of our customers based on their postcodes. Multiple addresses will be searched, so it would be nice if we could add the history of the last 3 in the page. Finally, alongside the address, we need to display the distance in a straight line, from the customer location to London Heathrow airport (lat/long: 51.4700223,-0.4542955) this should be displayed in both kilometers and miles.”
-
-> Ness - “Ok, I understand the request and I think I can provide some help. I’ve heard about https://postcodes.io/, and we can use it as web service where we can type the postcode and we get the address details back, alongside the latitude and longitude. As its straight line it should be very easy to calculate the distance between the airport and the customer address.
+<h3 align="center">Distance to London Heathrow airport .NET 6 + ReactJS</h3>
+<p align="center">
+    It is an application to compute your distance to London Heathrow airport. 
+    The application will find your address and display the distance in a straight line, given a postcode in UK.
+    The Postcodes.io API requests, storage (EF Core in memory), and distance computation are handled in the backend (.NET 6 Web API), while the frontend (ReactJS) is responsible to display the information requested.
+</p>
 
 ### A working example for the web service is: http://api.postcodes.io/postcodes/N76RS
 
+### ENDPOINTS
+
+`GET: /GetAddressByPostCode` verifies whether there is a saved address in the in-memory EF Core database. If the address was already searched and return it. Otherwise, make an API call to [Postcodes.io](http://api.postcodes.io/postcodes/) with the postcode, compute the distance, and save it in the in-memory EF Core database
+
+`GET: /GetLastThreeAddresses` retrieves the last three searched addresses from the in-memory EF Core database
+
 ## A few examples of valid postcodes in the UK are:
 
-| Index    | Postcode |          |
-|----------|----------|----------|
-| #1       | N76RS    |          |
-| #2       | SW46TA   |          |
-| #3       | SW1A     |          |
-| #4       | W1B3AG   |          |
-| #5       | PO63TD   |          |
+| Index | Postcode |     |
+| ----- | -------- | --- |
+| #1    | N76RS    |     |
+| #2    | SW46TA   |     |
+| #3    | SW1A     |     |
+| #4    | W1B3AG   |     |
+| #5    | PO63TD   |     |
 
-     
-	     
-		 
-
-I would recommend a dotnet + react (or angular) application would be an excellent idea, but feel free to use other technologies/frameworks that help you achieve the goal. Remember the focus must be as much in having it working as it should to have a good user experience, bonus points if you are able to create tests (Unit, Integration, Automated) to help guarantee an excellent code quality. It is important the user understands all the functionalities we have to offer and is able to understand them correctly
-
-Once you are done please commit the code and create a Pull Request so we can code review it.”
-
-Now that the exercise has been explained, you can start working on it, we normally request for it to be uploaded into our git repository within 3 working days, but can be changed if you need more time to start. This task should take you no longer than 3 hours and needless to say should be totally completed by you, after all this is supposed to be a fun challenge! 
-
----
-
-## We will provide you a git repository in bitbucket for the code to be uploaded. Please see the instructions below:
-
-Please sign up for an account on Bitbucket if you don't have one already. If you do, feel free to use your own login / profile.
-
-If you're not familiar with GIT, use the Sourcetree client to get started or visit http://git-scm.com for the official git client.
-
-Once you're done with your work, COMMIT and then PUSH (ie. send to bitbucket). The PUSH with notify us and we will review your work. Only push when you're done, and push once. This is to avoid us reviewing an incomplete submission.
-
----
-
-### We're here to help...
-Should you run into problems or have any questions - please get in touch with either your recruitment agent or with Renato Oliveira - renato.oliveira@craftablesoftware.com
-
-Good luck  
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/mateuszanatta/

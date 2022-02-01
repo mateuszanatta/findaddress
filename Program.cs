@@ -1,23 +1,11 @@
-using Microsoft.EntityFrameworkCore;
-using AddressService.Data;
-using AddressService.HttpClients.Interfaces;
-using AddressService.HttpClients;
-using AddressService.Services.Interfaces;
-using AddressService.Services;
+using AddressService.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMem"));
-builder.Services.AddTransient<IAddressRepo, AddressRepo>();
-builder.Services.AddScoped<IHttpClients, DefaultHttpClient>();
-builder.Services.AddScoped<IPostCodesIOService, PostCodesIOService>();
-builder.Services.AddTransient<IAddressesService, AddressesService>();
-builder.Services.AddHttpClient();
+builder.Services.AddCustomServices();
 
 var app = builder.Build();
 
